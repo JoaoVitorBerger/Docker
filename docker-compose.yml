@@ -1,0 +1,11 @@
+services:
+  web:
+   image: httpd:2.4
+   ports: "80:80"
+   volumes:
+     - /exercicio:/usr/local/apache2/htdocs/
+   networks:
+     - minha-rede
+networks:
+  minha-rede:
+    driver: bridge
